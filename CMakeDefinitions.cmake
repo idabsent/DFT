@@ -1,0 +1,16 @@
+set(LIBRARY_VERSION 0.1)
+set(LIBRARY_DESCRIPTION "The Digital Furie Transformation variants implementation")
+
+if(CMAKE_HOST_WIN32)
+    set(WINDOWS True)
+elseif(CMAKE_HOST_APPLE)
+    set(APPLE True)
+elseif(CMAKE_HOST_LINUX)
+    set(LINUX True)
+endif()
+
+if (WINDOWS AND CMAKE_CL_64)
+    set(WINDOWS_x64 True)
+else()
+    set(WINDOWS_x86 True)
+endif()
